@@ -75,10 +75,19 @@ namespace BeFaster.App.Solutions.FIZ
 
                 if (number % 3 == 0 && textTest.Contains("3") || (number % 5 == 0 && textTest.Contains("5")))
                 {
-                    output = "fizz buzz";
+                    string output1 = output;
+
+                    if (number % 2 != 0)
+                    {
+                        output = string.Format("{0} fake deluxe", output1);
+                    }
+                    else
+                    {
+                        output = string.Format("{0} deluxe", output1);
+                    }
                 }
 
-                if (Array.TrueForAll(array, x => x == array[0]) && number > 10)
+                /*if (Array.TrueForAll(array, x => x == array[0]) && number > 10)
                 {
                     //if (output == "fizz buzz")
                     //{
@@ -86,28 +95,13 @@ namespace BeFaster.App.Solutions.FIZ
                     //}
                     //else
                     //}
-
-
-                    if (number % 2 != 0) 
-                    {
-                        output = string.Format("{0} fake deluxe", output);
-                    }
-                    else
-                    {
-                        output += " deluxe";
-                    }
-
-                    if (output.StartsWith(" "))
-                    {
-                        output = output.Remove(0, 1);
-                    }
                     // }
-                }
+                }*/
 
                 if(output.Length == 0)
                 {
                     output = number.ToString();
-                }   
+                }  
 
 
             //}
@@ -121,4 +115,5 @@ namespace BeFaster.App.Solutions.FIZ
         }
     }
 }
+
 
