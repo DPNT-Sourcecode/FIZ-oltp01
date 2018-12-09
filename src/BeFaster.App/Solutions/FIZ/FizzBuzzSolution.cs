@@ -41,13 +41,13 @@ namespace BeFaster.App.Solutions.FIZ
 
             textTest.CopyTo(0, array, 0, length);
 
-            if (number % 15 == 0 || (textTest.Contains("3")) && (textTest.Contains("5")))
-            {
-                output = "fizz buzz";
-            }
+            //if (number % 15 == 0 || (textTest.Contains("3")) && (textTest.Contains("5")))
+            //{
+            //    output = "fizz buzz";
+            //}
 
-            else 
-            {
+            //else 
+            //{
                 if (number % 3 == 0 || textTest.Contains("3"))
                 {
                     output = "fizz";
@@ -66,6 +66,16 @@ namespace BeFaster.App.Solutions.FIZ
                     {
                         output = "fizz buzz";
                     }
+                }
+
+                if (number % 15 == 0 || (textTest.Contains("3")) && (textTest.Contains("5")))
+                {
+                    output = "fizz buzz";    
+                }
+
+                if (number % 3 == 0 && textTest.Contains("3") || (number % 5 == 0 && textTest.Contains("5")))
+                {
+                    output = "fizz buzz";
                 }
 
                 if (Array.TrueForAll(array, x => x == array[0]) && number > 10)
@@ -100,7 +110,7 @@ namespace BeFaster.App.Solutions.FIZ
                 }   
 
 
-            }
+            //}
 
             if (number == 555)
             { output = "fizz buzz fake deluxe"; }
@@ -111,3 +121,4 @@ namespace BeFaster.App.Solutions.FIZ
         }
     }
 }
+
