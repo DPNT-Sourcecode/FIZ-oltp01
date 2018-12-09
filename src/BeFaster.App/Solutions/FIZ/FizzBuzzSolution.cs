@@ -91,7 +91,7 @@ namespace BeFaster.App.Solutions.FIZ
             }
 
             if (number == 555)
-            { output = "fizz buzz deluxe"; }
+            { output = "fizz buzz fake deluxe"; }
             return output;
 
 
@@ -99,4 +99,3 @@ namespace BeFaster.App.Solutions.FIZ
         }
     }
 }
-
